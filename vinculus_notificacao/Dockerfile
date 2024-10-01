@@ -11,7 +11,7 @@ COPY vinculus_notificacao/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Copiar o código do projeto para o contêiner
-COPY . .
+COPY . /app
 
 EXPOSE 80
 
