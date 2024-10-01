@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copiar o arquivo de requisitos do projeto para o contêiner
-COPY requirements.txt requirements.txt
+COPY vinculus_notificacao/requirements.txt requirements.txt
 
 # Instalar dependências do projeto
 RUN pip install -r requirements.txt
