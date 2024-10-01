@@ -13,5 +13,7 @@ RUN pip install -r requirements.txt
 # Copiar o código do projeto para o contêiner
 COPY . .
 
+EXPOSE 80
+
 # Comando para executar a aplicação
 CMD ["python", "Notificacao.py"]
