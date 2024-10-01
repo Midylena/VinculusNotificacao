@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 80
 
 # Comando para executar a aplicação
-CMD ["python", "Notificacao.py"]
+CMD ["python", "vinculus_notificacao/Notificacao.py"]
