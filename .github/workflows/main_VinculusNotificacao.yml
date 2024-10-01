@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_a1ffb3adb055405a94b83963d2b1a492 }}/midylena/vinculus:${{ github.sha }}
-        file: ./Dockerfile
+        file: vinculus_notificacao/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
