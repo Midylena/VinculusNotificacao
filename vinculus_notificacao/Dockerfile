@@ -13,7 +13,9 @@ RUN pip install -r requirements.txt
 # Copiar o código do projeto para o contêiner
 COPY . /app
 
-EXPOSE 8080
+WEBSITED_PORT: 8080
+
+PORT: 8080
 
 # Comando para executar a aplicação
 CMD ["python", "vinculus_notificacao/Notificacao.py"]
