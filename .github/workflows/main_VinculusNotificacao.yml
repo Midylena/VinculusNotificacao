@@ -23,15 +23,15 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_ca15d523394f49339f8df739da6fd1fa }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_c1a986dd663b4623a521768ca4073707 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_c44a0712767a4c91beee7ce7f7365d07 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_ddd761b30d0a43a5880236731287fd62 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_ca15d523394f49339f8df739da6fd1fa }}/midylena/vinculus_notificacao:${{ github.sha }}
-        file: vinculus_notificacao/Dockerfile
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_c44a0712767a4c91beee7ce7f7365d07 }}/vinculus_notificacao:${{ github.sha }}
+        file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'VinculusNotificacao'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_3a634aaa8c8c4c5aba5f5b9bf3bef347 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_ca15d523394f49339f8df739da6fd1fa }}/midylena/vinculus_notificacao:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bcc006bf19c241f0a9e632503d4ba533 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_c44a0712767a4c91beee7ce7f7365d07 }}/vinculus_notificacao:${{ github.sha }}'
