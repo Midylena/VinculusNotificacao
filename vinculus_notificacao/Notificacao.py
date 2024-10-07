@@ -53,5 +53,5 @@ def main():
         time.sleep(0.1) 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='vinculusnotification-ewfefphyekbecqe7.eastus2-01.azurewebsites.net', port=8000)
     main()
