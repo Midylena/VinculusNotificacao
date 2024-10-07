@@ -28,7 +28,7 @@ def process_data(bearer_token):
     mod = abs(raiz)
 
 
-    if mod >= 20:
+    if mod >= 5:
         dataHora = datetime.now()
         dataHoraAtual = dataHora.strftime("%d-%m-%Y %H:%M:%S")
         API.post(1, dataHoraAtual, bearer_token)
